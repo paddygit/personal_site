@@ -35,6 +35,9 @@ nav .logo {
   font-size: 12px;
 }
 
+nav .logo > a {
+  text-decoration: none;
+}
 .nav-items li {
   list-style: none;
   margin-right: 60px;
@@ -57,6 +60,10 @@ nav .logo {
 .header-container {
   background: white;
   display: flex;
+  align-items: center;
+}
+.header-container-grid {
+  background: white;
   align-items: center;
 }
 
@@ -102,6 +109,51 @@ nav .logo {
 .right {
   display: inline-block;
   width: 50%;
+}
+
+.wrapper-session {
+  margin: auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;
+}
+
+.session-cell {
+  display: grid;
+  grid-template-columns: 5fr 13fr;
+  grid-auto-rows: minmax(100px, auto);
+  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+}
+
+.session-cell > div:nth-of-type(odd) {
+  display: grid;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  align-items: center;
+  text-align: center;
+}
+
+.wrapper-session .session-cell > div:nth-of-type(even) {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  align-items: center;
+}
+
+.wrapper-session .session-cell > div p {
+  margin-left: 10px;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+
+.wrapper-session .session-cell > div p a {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: lowercase;
+  text-decoration: solid;
 }
 
 header {
